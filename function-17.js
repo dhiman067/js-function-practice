@@ -31,17 +31,20 @@ function largeWord(string) {
     }
 
     const max = Math.max(...newArry)
+    let arrayOfLargeWords = []
     for (const str of arrayOfString) {
         if (max === str.length) {
-            return str
+            arrayOfLargeWords.push(str)
         }
     }
+    return arrayOfLargeWords
 }
 
-const string = 'I am learning Programming to become a programmer'
+
+const string = 'I am learning Leaderships Programming to become a programmer'
 const largeWordFromString = largeWord(string)
 console.log(largeWordFromString)
 
-const string2 = 'i want to the best person in the world'
+const string2 = 'i want to the best person in the world and i also want to be a good programmer'
 const largeWordFromString2 = largeWord(string2)
 console.log(largeWordFromString2)
