@@ -14,11 +14,13 @@
 
 function extractUserInfo(userObj) {
 
+let{user:{name,age},hobbies:[first = "nothing yet", second = "nothing yet"]} = userObj
+return `${name} (${age}) likes ${second}`
 
-    let { user, hobbies } = userObj
-    let { name, age } = user
-    let [first = "nothing yet", second = "nothing yet", third="nothing yet"] = hobbies
-    return `${name} (${age}) likes ${second}`
+    // let { user, hobbies } = userObj
+    // let { name, age } = user
+    // let [first = "nothing yet", second = "nothing yet", third="nothing yet"] = hobbies
+    // return `${name} (${age}) likes ${second}`
 }
 console.log(extractUserInfo({ user: { name: "Sadia", age: 22 }, hobbies: ["reading", "coding"] }));
 console.log(extractUserInfo({ user: { name: "Rafi", age: 19 }, hobbies: [] }));
